@@ -7,40 +7,105 @@
     <title>NE</title>
 </head>
 <body>
-
-    <div class="main-container">
-        <div class="main">
-            
-            <table>                
+    
+    <div class="container">
+        <div class="row">
+            <p>Good Day</p>
+            <table>
+                <caption>Good Day</caption>
+                <th></th>
+                <th>B</th>
+                <th>S</th>
                 <tr>
-                    <td><input type="text"> , <input type="text"></td>
-                    <td><input type="text"> , <input type="text"></td>
+                    <th>B</th>                    
+                    <td><input class="inp" type="text" name="" id="bb-gg-m"> , <input class="inp" type="text" name="" id="bb-gg-w"></td>
+                    <td><input class="inp" type="text" name="" id="bs-gg-m"> , <input class="inp" type="text" name="" id="bs-gg-w"></td>
                 </tr>
                 <tr>
-                    <td><input type="text"> , <input type="text"></td>
-                    <td><input type="text"> , <input type="text"></td>
+                    <th>S</th>
+                    <td><input class="inp" type="text" name="" id="sb-gg-m"> , <input class="inp" type="text" name="" id="sb-gg-w"></td>
+                    <td><input class="inp" type="text" name="" id="ss-gg-m"> , <input class="inp" type="text" name="" id="ss-gg-w"></td>
                 </tr>
             </table>
-
-            <div class="q1">
-                <label for="lambda">&lambda; : </label>
-                <input id="lambda" type="text">	
-                <label for="lambda">[0,1]</label>
+    
+            <table>
+                <caption>Bad Day</caption>
+                <th></th>
+                <th>B</th>
+                <th>S</th>
+                <tr>
+                    <th>B</th>                    
+                    <td><input class="inp" type="text" name="" id="bb-gb-m"> , <input class="inp" type="text" name="" id="bb-gb-w"></td>
+                    <td><input class="inp" type="text" name="" id="bs-gb-m"> , <input class="inp" type="text" name="" id="bs-gb-w"></td>
+                </tr>
+                <tr>
+                    <th>S</th>
+                    <td><input class="inp" type="text" name="" id="sb-gb-m"> , <input class="inp" type="text" name="" id="sb-gb-w"></td>
+                    <td><input class="inp" type="text" name="" id="ss-gb-m"> , <input class="inp" type="text" name="" id="ss-gb-w"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <p id="r2-lbl">Bad Day</p>
+            <table>        
+                <th></th>
+                <th>B</th>
+                <th>S</th>
+                <tr>
+                    <th>B</th>                    
+                    <td><input class="inp" type="text" name="" id="bb-bg-m"> , <input class="inp" type="text" name="" id="bb-bg-w"></td>
+                    <td><input class="inp" type="text" name="" id="bs-bg-m"> , <input class="inp" type="text" name="" id="bs-bg-w"></td>
+                </tr>
+                <tr>
+                    <th>S</th>
+                    <td><input class="inp" type="text" name="" id="sb-bg-m"> , <input class="inp" type="text" name="" id="sb-bg-w"></td>
+                    <td><input class="inp" type="text" name="" id="ss-bg-m"> , <input class="inp" type="text" name="" id="ss-bg-w"></td>
+                </tr>
+            </table>
+    
+            <table>        
+                <th></th>        
+                <th>B</th>
+                <th>S</th>
+                <tr>
+                    <th>B</th>                    
+                    <td><input class="inp" type="text" name="" id="bb-bb-m"> , <input class="inp" type="text" name="" id="bb-bb-w"></td>
+                    <td><input class="inp" type="text" name="" id="bs-bb-m"> , <input class="inp" type="text" name="" id="bs-bb-w"></td>
+                </tr>
+                <tr>
+                    <th>S</th>
+                    <td><input class="inp" type="text" name="" id="sb-bb-m"> , <input class="inp" type="text" name="" id="sb-bb-w"></td>
+                    <td><input class="inp" type="text" name="" id="ss-bb-m"> , <input class="inp" type="text" name="" id="ss-bb-w"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col">
+            <div class="row">
+                <label for="alfa">&alpha; : </label>
+                <input class="inp" type="text" name="" id="alfa"> [0,1]
             </div>
             
-            <div class="q2">
-                <label for="p-val">p : </label>
-                <input id="p-val" type="text">
-                <label for="p-val">[0,1]</label>
+            <div class="row">
+                <label for="beta">&beta; : </label>
+                <input class="inp" type="text" name="" id="beta"> [0,1]
             </div>
-            
 
-            
-
-            <button class="claculate">calculate NE</button>
+            <button type="button" onclick="calculateNE()">Calculate NE</button>
+            <button type="button" onclick="clearAllInput()">Clear all</button>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <div class="container" style="margin-top: 5px; height: 180px;">
+        <h2 id="h2-ne">
+            Nash Equilibrium Bayesian Games
+        </h2>
+        <div class="answer" id="show-res">
+
+        </div>
+
+    </div>
 </body>
+
+<script src="app.js"></script>
+
 </html>
