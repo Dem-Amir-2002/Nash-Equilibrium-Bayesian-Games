@@ -237,10 +237,10 @@ function findAllNE(s1 , s2) {
     }
     else if(Array.isArray(s1["bs"]) && !Array.isArray(s1[s2["ss"][1]]) && !Array.isArray(s1[s2["ss"][0]])) {
         if("bs" == s2[s1["bs"][1]]) {
-            ne.push("(B,S) , ("+s1["bs"][1][0]+","+s1["bs"][1][1].toUpperCase()+")");
+            ne.push("(B,S) , ("+s1["bs"][1][0].toUpperCase()+","+s1["bs"][1][1].toUpperCase()+")");
         }
         else if("bs" == s2[s1["bs"][0]]) {
-            ne.push("(B,S) , ("+s1["bs"][0][0]+","+s1["bs"][0][1].toUpperCase()+")");
+            ne.push("(B,S) , ("+s1["bs"][0][0].toUpperCase()+","+s1["bs"][0][1].toUpperCase()+")");
         }
     }
 
@@ -535,7 +535,7 @@ function findAllNE(s1 , s2) {
 function br_s1(b_w_mg , s_w_mg , b_w_mb , s_w_mb) {
     let r1,r2;
 
-    if((b_w_mg == s_w_mg) || (Math.abs(b_w_mg - s_w_mg) < 0.0000000001)) {
+    if((b_w_mg == s_w_mg) || (Math.abs(b_w_mg - s_w_mg) < 0.00001)) {
         r1 = "bs";
     }
     else if(b_w_mg > s_w_mg) {
@@ -546,7 +546,7 @@ function br_s1(b_w_mg , s_w_mg , b_w_mb , s_w_mb) {
     }
     
 
-    if((b_w_mb == s_w_mb) || (Math.abs(b_w_mb - s_w_mb) < 0.0000000001)) {
+    if((b_w_mb == s_w_mb) || (Math.abs(b_w_mb - s_w_mb) < 0.00001)) {
         r2 = "bs";
     }
     else if(b_w_mb > s_w_mb) {
